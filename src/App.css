@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#quote-box {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    width: 500px;
+    max-width: 500px;
+    min-height: 300px;
+    border-radius: 5px;
+    padding: 50px 50px 25px 50px;
+    background-color: gainsboro;
+    font-size: 18px;
+    letter-spacing: .8px;
+    color: #191919;
 }
 
-.App-link {
-  color: #61dafb;
+#text {
+    border-left: 5px solid #191919;
+    padding-left: 20px;
+    align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#author {
+    font-weight: 600;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+.buttons {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tweet-btn a {
+    height: 45px;
+    width: 45px;
+    display: grid;
+    place-items: center;
+    line-height: 25px;
+    border: 2px solid #191919;
+    border-radius: 5px;
+    background-color: #191919;
+    transition: .3s;
+}
+
+#tweet-btn a:hover {
+    background-color: #ccc;
+}
+
+#tweet-btn a:hover svg {
+    fill: #191919;
+}
+
+#tweet-btn svg {
+    fill: #ccc;
+    height: 20px;
+    width: 20px;
+    transition: .3s;
+}
+
+#new-quote {
+    cursor: pointer;
+    width: 100px;
+    height: 45px;
+    background-color: #191919;
+    border-radius: 5px;
+    border: 2px solid #191919;
+    color: #ccc;
+    font-size: 16px;
+    transition: .3s;
+}
+
+#new-quote:hover {
+    background-color: #ccc;
+    color: #191919;
+}
+
+.hidden {
+    opacity: 0;
+    transition: .3s;
+}
+
+.visible {
+    transition: .3s;
 }
