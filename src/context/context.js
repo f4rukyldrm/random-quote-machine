@@ -1,5 +1,4 @@
 import { useContext, createContext, useState, useEffect } from 'react'
-import Quote from '../components/Quote';
 
 const AppContext = createContext();
 
